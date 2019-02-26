@@ -1,0 +1,7 @@
+.CardContain {
+  display: grid;
+  grid-template-columns: repeat(5, 250px);
+  grid-gap: 8px;
+  margin: auto;
+  width: 1282px;
+}

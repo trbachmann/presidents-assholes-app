@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Card } from '../../components/Card/Card';
+import './CardContain.css';
 
 export const CardContain = (props) => {
   const presidentCards = props.presidents.map(president => {
