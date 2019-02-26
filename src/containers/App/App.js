@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-import { fetchPresidents } from '../thunks/fetchPresidents';
-import { Loading } from '../Loading/Loading';
-import { Error404 } from '../Error404/Error404';
+import { fetchPresidents } from '../../thunks/fetchPresidents';
+import { Loading } from '../../components/Loading/Loading';
+import { Error404 } from '../../components/Error404/Error404';
 
 export class App extends Component {
   componentDidMount() {
