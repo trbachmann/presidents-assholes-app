@@ -8,3 +8,8 @@ export const toggleLoading = (bool) => ({
   bool
 });
 
+export const setError = (message) => ({
+  type: 'SET_ERROR',
+  message
+});
+
