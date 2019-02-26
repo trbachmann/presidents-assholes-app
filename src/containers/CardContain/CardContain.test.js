@@ -7,10 +7,12 @@ describe('CardContain', () => {
       const mockState = {
         presidents: mockPresidents,
         isLoading: false,
-        hasErrored: ''
+        hasErrored: '',
+        currentParty: 'All'
       };
       const expected = {
-        presidents: mockPresidents
+        presidents: mockPresidents,
+        currentParty: 'All'
       };
       const mappedProps = mapStateToProps(mockState);
       expect(mappedProps).toEqual(expected);
