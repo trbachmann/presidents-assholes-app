@@ -13,3 +13,7 @@ export const setError = (message) => ({
   message
 });
 
+export const setFilter = (filter) => ({
+  type: 'SET_PARTY',
+  filter
+});
