@@ -16,8 +16,8 @@ export const Card = (props) => {
     <div className='Card'>
       <p>Number: {number}</p>
       <p>President: {president}</p>
-      <p>Birth Year: {birth_year}</p>
-      <p>Death Year: {death_year}</p>
+      <p>Born: {birth_year}</p>
+      <p>Died: {death_year || 'N/A'}</p>
       <p>Took Office: {took_office}</p>
       <p>Left Office: {left_office}</p>
       <p>Party: {party}</p>
