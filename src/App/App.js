@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import { connect } from 'react-redux';
+import { fetchPresidents } from '../thunks/fetchPresidents';
 
-class App extends Component {
+export class App extends Component {
+  componentDidMount() {
+    this.props.fetchPresidents();
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,4 +19,13 @@ class App extends Component {
   }
 }
 
-export default App;
+export const mapStateToProps = (state) => ({
+  isLoading: state.isLoading,
+  hasErrored: state.hasErrored
+});
+
+export const mapDispatchToProps = (dispatch) => ({
+  fetchPresidents: () => dispatch(fetchPresidents()) 
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
