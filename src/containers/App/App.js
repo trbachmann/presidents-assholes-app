@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchPresidents } from '../../thunks/fetchPresidents';
 import { Loading } from '../../components/Loading/Loading';
 import { Error404 } from '../../components/Error404/Error404';
+import CardContain from '../CardContain/CardContain';
 
 export class App extends Component {
   componentDidMount() {
@@ -15,10 +16,11 @@ export class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <h1>Presidents</h1>
+        <h1>Presidents and things</h1>
+        </header>
         { isLoading && <Loading /> }
         { (hasErrored !== '') && <Error404 /> }
-        </header>
+        <CardContain />
       </div>
     );
   }
