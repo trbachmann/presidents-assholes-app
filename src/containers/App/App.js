@@ -5,6 +5,7 @@ import { fetchPresidents } from '../../thunks/fetchPresidents';
 import { Loading } from '../../components/Loading/Loading';
 import { Error404 } from '../../components/Error404/Error404';
 import CardContain from '../CardContain/CardContain';
+import FilterControls from '../FilterControls/FilterControls';
 
 export class App extends Component {
   componentDidMount() {
@@ -20,6 +21,7 @@ export class App extends Component {
         </header>
         { isLoading && <Loading /> }
         { (hasErrored !== '') && <Error404 /> }
+        <FilterControls />
         <CardContain />
       </div>
     );
